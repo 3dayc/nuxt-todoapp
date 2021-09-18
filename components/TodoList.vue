@@ -22,6 +22,15 @@ export default {
       ],
     }
   },
+  // created() {
+  //   if (localStorage.length > 0) {
+  //     for (let i = 0; i < localStorage.length; i++) {
+  //       this.todoItems.push(
+  //         JSON.parse(localStorage.getItem(localStorage.key(i)))
+  //       )
+  //     }
+  //   }
+  // },
   methods: {
     doneToggle(index) {
       if (this.todoItems[index].completed === 'done') {
@@ -47,6 +56,9 @@ export default {
 .list-item > li {
   padding: 0.5rem 1rem;
 }
+.list-item > li > span:first-child {
+  cursor: pointer;
+}
 .list-item > li:first-child {
   padding-top: 1rem;
 }
@@ -55,6 +67,7 @@ export default {
 }
 .close-btn {
   float: right;
+  cursor: pointer;
 }
 .done {
   text-decoration: line-through;
